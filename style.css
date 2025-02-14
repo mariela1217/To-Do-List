@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: url(imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 20px;
+}
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #ffffff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h2 {
+  margin-top: -30px;
+}
+
+.todo-app h2 img{
+  width: 45px;
+  margin-left: -8px;
+  position: relative;
+  top: 13px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  
+}
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #f50f0f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+ul li{
+  list-style: none;
+  font-style: 17px;
+  padding: 15px 50px 15px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%; 
+  white-space: normal;
+  display: block;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 32px;
+  width: 30px;
+  border-radius: 50%;
+  background-image: url(imagenes/moneda.gif);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(imagenes/saltando.webp);
+
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: #edeef0;
+}
+.task-item {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task-item {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Esta es para el scroll de la lista*/
+#list-container {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  border: 1px solid #f9f9f9;
+}
